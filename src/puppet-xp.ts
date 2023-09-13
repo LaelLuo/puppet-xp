@@ -55,7 +55,7 @@ async function wait (ms:number) {
 }
 
 const userInfo = os.userInfo()
-const rootPath = `${userInfo.homedir}\\Documents\\WeChat Files\\`
+const rootPath = process.env['WECHAT_DOCUMENT_DIR'] ?? `${userInfo.homedir}\\Documents\\WeChat Files\\`
 
 export type PuppetXpOptions = PUPPET.PuppetOptions
 
